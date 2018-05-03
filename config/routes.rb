@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root "cafes#index"
-  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
+
   get 'users/profile'
   post 'users/profile'
 
@@ -31,7 +32,9 @@ Rails.application.routes.draw do
       get 'map'
     end
   end
+
   resources :posts
+
   resources :comments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

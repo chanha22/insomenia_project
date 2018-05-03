@@ -17,7 +17,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c7334341bb7b96d57b2d7bcef8095d8e&libraries=services"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a278bb9e5f2e640e6f875d6f0b3e70ea&libraries=services"></script>
 
   </head>
 
@@ -48,7 +48,7 @@
             <button type="submit" class="btn btn-default">검색</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-          <% if not user_signed_in? %>
+          <% unless user_signed_in? %>
             <li><%= link_to "로그인", new_user_session_path %></li>
             <li><%= link_to "회원가입", new_user_registration_path %></li>
           <% else %>
